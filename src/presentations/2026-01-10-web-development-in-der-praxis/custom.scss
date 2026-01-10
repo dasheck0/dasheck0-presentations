@@ -1,0 +1,182 @@
+// Custom styles for Web Development in der Praxis presentation
+
+// Override center alignment - make content left-aligned
+.reveal {
+  .slides {
+    text-align: left;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: left;
+  }
+
+  p,
+  ul,
+  ol {
+    text-align: left;
+  }
+
+  // Keep section backgrounds centered
+  section {
+    text-align: left;
+  }
+}
+
+// Agenda grid layout
+.agenda-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 4rem;
+  margin-top: 2rem;
+
+  .agenda-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.5rem;
+
+    &:hover {
+      border-left: 6px solid #8b7ad6;
+    }
+
+    .agenda-content {
+      flex: 1;
+
+      h3 {
+        font-size: 2.5rem;
+        color: white;
+      }
+    }
+  }
+}
+
+// Chip layout
+.chip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+
+  .chip {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 6px solid #8b7ad6;
+
+    h3 {
+        font-size: 1.2rem;
+        margin: 0 0 0.5rem 0;
+        color: #8b7ad6;
+      }
+  }
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
+
+  .image-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    justify-self: center;
+  }
+}
+
+// Highlight first letter with bold and color
+.highlight-first {
+  font-weight: bold;
+  color: #8b7ad6;
+  font-size: 1.2em;
+}
+
+// Decision matrix table
+.decision-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 0.7rem;
+
+  thead {
+    background: #8b7ad6;
+    color: white;
+
+    th {
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  tbody {
+    tr {
+      background: rgba(139, 122, 214, 0.1);
+
+      &:nth-child(even) {
+        background: rgba(139, 122, 214, 0.2);
+      }
+
+      td {
+        padding: 0.75rem;
+        border: 1px solid rgba(139, 122, 214, 0.3);
+        vertical-align: top;
+
+        &:first-child {
+          font-weight: 500;
+          width: 25%;
+        }
+
+        &:nth-child(2) {
+          font-weight: 600;
+          color: #8b7ad6;
+          width: 15%;
+        }
+      }
+    }
+  }
+}
+
+.info-boxes {
+  display: list;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  .info-box {
+    display: list-item;
+    border-radius: 10px;
+    padding: 1.5rem;
+
+    h4 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+  }
+}
+
+.note {
+  font-style: italic;
+  margin-top: 5rem;
+}
+
+.center {
+  text-align: center;
+}

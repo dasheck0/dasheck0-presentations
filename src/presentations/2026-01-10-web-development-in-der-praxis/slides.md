@@ -1,3 +1,5 @@
+<!-- .slide: data-background-image="./assets/coding-background.jpg" data-background-opacity="0.1" -->
+
 # Web Development in der Praxis
 
 Theorie vs. Realität
@@ -6,16 +8,62 @@ Theorie vs. Realität
 
 ## Agenda
 
-- Tech Stack verstehen
-- Entscheidungen systematisch treffen
-- Tech Radar als Steuerungsinstrument
-- Karriereentwicklung planen
+<div class="agenda-grid">
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Tech Stack</h3>
+    </div>
+  </div>
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Decision Matrix</h3>
+    </div>
+  </div>
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Tech Radar</h3>
+    </div>
+  </div>
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Developer Roadmaps</h3>
+    </div>
+  </div>
+</div>
 
 ---
 
-<!-- .slide: data-background-color="#8b7ad6" -->
+<!-- .slide: data-background-image="./assets/tech-stack-bg.jpg" data-background-opacity="0.1" -->
 
 # Tech Stack
+
+--
+
+## Was ist ein Tech Stack?
+
+Liste aller Technologien für Entwicklung und Betrieb
+
+<!-- .element: class="fragment" -->
+
+<div class="chip-grid">
+  <span class="chip">Daten / Persistierung</span>
+  <span class="chip">Backend</span>
+  <span class="chip">Frontend</span>
+  <span class="chip">Runtime Environment</span>
+</div>
+
+<!-- .element: class="fragment chip-grid" -->
+
+<div class="image-grid">
+  <img class="image-item" src="./assets/react.png" alt="React" />
+  <img class="image-item" src="./assets/node.png" alt="Node.js" /
+  <img class="image-item" src="./assets/mysql.jpg" alt="MySQL" />
+  <img class="image-item" src="./assets/mysql.jpg" alt="MySQL" />
+  <img class="image-item" src="./assets/vue.png" alt="Vue.js" />
+  <img class="image-item" src="./assets/nest.svg" alt="NestJS" />
+</div>
+
+<!-- .element: class="fragment image-grid" -->
 
 --
 
@@ -27,28 +75,17 @@ Vielseitiger Tech Stack im Startup
 - Agiles arbeiten
 - Migration vom Programmierer zum Produktentwickler
 
-Note: Der moderne Tech Stack ist kein statisches Konzept mehr. Entwickler müssen kontinuierlich lernen und sich anpassen.
+<div class="note">
+Der moderne Tech Stack ist kein statisches Konzept mehr. Entwickler müssen kontinuierlich lernen und sich anpassen.
+</div>
 
---
-
-## Was ist ein Tech Stack?
-
-Liste aller Technologien für Entwicklung und Betrieb
-
-<!-- .element: class="fragment" -->
-
-- **Daten / Persistierung**
-- **Backend**
-- **Frontend**
-- **Runtime Environment**
-
-<!-- .element: class="fragment" -->
-
-Note: Ein vollständiger Tech Stack umfasst weit mehr als nur Frontend und Backend.
+<!-- .element: class="fragment note" -->
 
 --
 
 ## Tech Stack Dimensionen
+
+Tech Stack umfasst allerdings mehr als nur die direkten Technologien
 
 - IT Infrastructure
 - Collaboration Framework
@@ -56,17 +93,23 @@ Note: Ein vollständiger Tech Stack umfasst weit mehr als nur Frontend und Backe
 - Dokumentation
 - Monitoring & Observability
 
+<!-- .element: class="fragment" -->
+
 --
 
 ## Beispiel Stack
 
-**Datenbank:** MongoDB / MariaDB
+**Datenbank:** MongoDB
 
-**Backend:** NestJS (Node.js)
+**Backend:** Express
 
-**Frontend:** React / Vue.js
+**Frontend:** React
 
-**Cloud:** AWS
+**Runtime:** Node
+
+Wird auch MERN Stack genannt
+
+<!-- .element: class="fragment note" -->
 
 --
 
@@ -82,7 +125,7 @@ Wie verwalte ich einen Tech Stack in einer Organisation?
 
 ---
 
-<!-- .slide: data-background-color="#8b7ad6" -->
+<!-- .slide: data-background-image="./assets/decision-matrix-bg.jpg" data-background-opacity="0.1" -->
 
 # Decision Matrix
 
@@ -98,7 +141,7 @@ Wichtige technische Entscheidungen sollten:
 - **Systematisch** ablaufen
 - **Transparent** dokumentiert sein
 
-Note: Die Decision Matrix ist ein Prozess, keine Tabelle.
+<!-- .element: class="fragment" -->
 
 --
 
@@ -163,11 +206,11 @@ Note: Kontext definiert was möglich ist, nicht was wünschenswert ist.
 
 **Gute Kriterien sind:**
 
-- Messbar (idealerweise objektiv)
-- Relevant
-- Klar und eindeutig
-- Spezifisch
-- Vollständig (relativ zum Kontext)
+- <span class="highlight-first">M</span>essbar (idealerweise objektiv)
+- <span class="highlight-first">U</span>mfassen
+- <span class="highlight-first">R</span>elevant
+- <span class="highlight-first">K</span>lar
+- <span class="highlight-first">S</span>pezifisch
 
 <!-- .element: class="fragment" -->
 
@@ -179,9 +222,11 @@ Note: Kontext definiert was möglich ist, nicht was wünschenswert ist.
 
 **Priorisierung:**
 
-- Must have
-- Should have
-- Could have
+<div class="chip-grid">
+  <span class="chip">Must have</span>
+  <span class="chip">Should have</span>
+  <span class="chip">Could have</span>
+</div>
 
 <!-- .element: class="fragment" -->
 
@@ -227,11 +272,44 @@ Note: Alternativen können multiple Dimensionen kombinieren: Sprache + Framework
 
 🔴 Rot = erfüllt Kriterium größtenteils nicht
 
-<!-- .element: class="fragment" -->
-
 **Optional:** Scoring mit Gewichtung
 
 <!-- .element: class="fragment" -->
+
+--
+
+## Beispiel: Alternativen bewerten
+
+<table class="decision-matrix">
+  <thead>
+    <tr>
+      <th>Kriterium</th>
+      <th>Priorität</th>
+      <th>NestJS + VueJS + AWS</th>
+      <th>Spring Boot + JSP + Azure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Das umsetzende Team hat genügend Erfahrung mit der Technologie</td>
+      <td>Should Have</td>
+      <td>Das Team hat in den letzten 3 Jahren 4 Projekte mit dem Tech Stack in Produktion gebraucht</td>
+      <td>Nur 2 von 5 Entwickeln haben bereits Erfahrung mit Sprint Boot. Azure ist allen bekannt.</td>
+    </tr>
+    <tr>
+      <td>Die Projektanforderungen können umgesetzt werden</td>
+      <td>Must Have</td>
+      <td>Umsetzbar</td>
+      <td>Umsetzbar</td>
+    </tr>
+    <tr>
+      <td>Die Auswahl der Technologie darf in keinem Widerspruch zu Vorgaben stehen</td>
+      <td>Must Have</td>
+      <td>Nicht Java Technologien müssen als begründete Ausnahme von einem Architekturboard genehmigt werden</td>
+      <td>Widerspricht keinen Vorgaben.</td>
+    </tr>
+  </tbody>
+</table>
 
 --
 
@@ -249,13 +327,12 @@ Jede Entscheidung hat Nebeneffekte
 
 --
 
-## Vorteile der Decision Matrix
+## Template
 
-- Reduziert kognitive und persönliche Bias
-- Verbessert Entscheidungsqualität im Durchschnitt
-- Schafft Transparenz und Nachvollziehbarkeit
-- Fördert Team-Partizipation
-- Produziert dauerhafte Dokumentation
+Template mit Erklärung, Beispiel und Vorlage
+https://miro.com/app/board/uXjVLe4L0co=/
+
+<img src="./assets/qrcode.png">
 
 --
 
@@ -266,9 +343,19 @@ Jede Entscheidung hat Nebeneffekte
 - Situationen mit starker Bias
 - Entscheidungen mit Kommunikationspflicht
 
+--
+
+## Vorteile der Decision Matrix
+
+- Reduziert kognitive und persönliche Bias
+- Verbessert Entscheidungsqualität im Durchschnitt
+- Schafft Transparenz und Nachvollziehbarkeit
+- Fördert Team-Partizipation
+- Produziert dauerhafte Dokumentation
+
 ---
 
-<!-- .slide: data-background-color="#8b7ad6" -->
+<!-- .slide: data-background-image="./assets/tech-radar-bg.jpg" data-background-opacity="0.1" -->
 
 # Tech Radar
 
@@ -332,7 +419,7 @@ Ein Tech Radar:
 
 ---
 
-<!-- .slide: data-background-color="#8b7ad6" -->
+<!-- .slide: data-background-image="./assets/roadmap-bg.png" data-background-opacity="0.1" -->
 
 # Developer Roadmaps
 
@@ -368,6 +455,7 @@ Ein Roadmap ist eine **Strategie**, keine Checkliste
 - Langfristiges Ziel definieren
 - Skill-Aufbau entsprechend planen
 - Regelmäßig Richtung überprüfen
+- Spaß daran haben
 
 <!-- .element: class="fragment" -->
 
@@ -375,29 +463,8 @@ Ein Roadmap ist eine **Strategie**, keine Checkliste
 
 ## Nützliche Ressourcen
 
-- Strukturierte Lernplattformen (Udemy, Coursera)
-- Kuratiertes Wissen (GitHub "awesome" Listen)
-- Community Roadmaps (roadmap.sh)
-- Kontinuierliche Info-Streams (Newsletter)
-
----
-
-## Key Takeaways
-
-Tech Stacks sind **multidimensional**
-
-Entscheidungen sollten **systematisch** getroffen werden
-
-Tech Radar als **strategisches Werkzeug**
-
-Karriere **intentional** entwickeln
-
-Lebenslanges Lernen als **Mindset**
-
-<!-- .element: class="fragment" -->
-
----
-
-## Danke!
-
-Fragen?
+- Udemy: https://udemy.com
+- Coursera: https://coursera.org
+- Awesome Github Lists https://github.com/topics/awesome
+- roadmap.sh: https://roadmap.sh
+- TLDR Newsletter: https://tldr.tech
