@@ -1,6 +1,16 @@
-# Nanoverse Demo
+# The Trillion Dollar Software Stack
 
-Welcome to your presentation
+## Wir operationalisieren den AI Software Development Stack – workflow-tief, sicher und EU-ready
+
+<div class="tags">
+  <span class="tag">Multi-LLM</span>
+  <span class="tag">Multi-Agent</span>
+  <span class="tag">Workflow Integration</span>
+  <span class="tag">Infrastructure / SaaS</span>
+  <span class="tag">EU AI Act</span>
+</div>
+
+<p class="subtitle">- vertraulich -</p>
 
 ---
 
@@ -21,18 +31,6 @@ const greet = (name: string): string => {
 
 console.log(greet('World'));
 ```
-
----
-
-## Vertical Slides
-
-Press down arrow
-
---
-
-## Nested Slide
-
-This is a vertical slide
 
 ---
 

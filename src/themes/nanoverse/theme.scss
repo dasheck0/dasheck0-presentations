@@ -3,74 +3,204 @@
  * Brand colors and styles for nanoverse presentations
  */
 
-// Variables
-$nanoverse-primary: #7c3aed;
-$nanoverse-secondary: #a78bfa;
-$nanoverse-dark: #1e1b4b;
-$nanoverse-light: #f5f3ff;
-$nanoverse-accent: #ec4899;
+// Color Variables - Based on Nanoverse brand
+$nanoverse-dark-primary: #2d2757;
+$nanoverse-dark-secondary: #3d2b70;
+$nanoverse-purple: #8b7ad6;
+$nanoverse-purple-light: #a78bfa;
+$nanoverse-purple-accent: #7c5fe0;
+$nanoverse-text-white: #ffffff;
+$nanoverse-text-purple: #8b7ad6;
+
+// Font Face Declarations
+@font-face {
+  font-family: 'Sharp Grotesk Book';
+  src: url('./assets/fonts/SharpGroteskBook19.woff2') format('woff2'),
+       url('./assets/fonts/SharpGroteskBook19.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sharp Grotesk SmBold';
+  src: url('./assets/fonts/SharpGroteskSmBold15.woff2') format('woff2'),
+       url('./assets/fonts/SharpGroteskSmBold15.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sharp Grotesk Medium';
+  src: url('./assets/fonts/SharpGroteskMedium20.otf') format('opentype'),
+       url('./assets/fonts/SharpGroteskMedium20.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 // Base reveal.js import
 @import 'reveal.js/dist/theme/black.css';
 
 // Theme customization
 .reveal {
-  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: linear-gradient(135deg, $nanoverse-dark 0%, darken($nanoverse-primary, 20%) 100%);
-  color: $nanoverse-light;
+  font-family: 'Sharp Grotesk Book', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $nanoverse-text-white;
 }
 
+// Logo in top-left corner
+.nanoverse-logo {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  width: 180px;
+  height: 40px;
+  background-image: url('./assets/scaleshape.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  z-index: 100;
+  pointer-events: none;
+}
+
+// Typography
 .reveal h1,
 .reveal h2,
 .reveal h3,
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  font-weight: 700;
-  color: $nanoverse-secondary;
   text-transform: none;
+  line-height: 1.2;
+}
+
+// Main headlines (h1, h2) - Sharp Grotesk SmBold 15
+.reveal h1,
+.reveal h2 {
+  font-family: 'Sharp Grotesk SmBold', 'Sharp Grotesk Book', sans-serif;
+  font-weight: 600;
 }
 
 .reveal h1 {
-  font-size: 3.5em;
-  margin-bottom: 0.5em;
-  background: linear-gradient(90deg, $nanoverse-secondary, $nanoverse-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 4.5em;
+  margin-bottom: 0.3em;
+  color: $nanoverse-text-white;
+  text-align: center;
+  letter-spacing: -0.02em;
 }
 
-.reveal a {
-  color: $nanoverse-secondary;
+.reveal h2 {
+  font-size: 2em;
+  color: $nanoverse-text-purple;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+}
+
+// Secondary headlines (h3-h6) - Sharp Grotesk Medium
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: 'Sharp Grotesk Medium', 'Sharp Grotesk Book', sans-serif;
+  font-weight: 500;
+}
+
+.reveal h3 {
+  font-size: 1.5em;
+  color: $nanoverse-purple-light;
+}
+
+// Pill-shaped tags/buttons
+.reveal .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.reveal .tag {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid $nanoverse-purple;
+  border-radius: 50px;
+  color: $nanoverse-text-white;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: none;
+  background: transparent;
+  transition: all 0.3s ease;
   
   &:hover {
-    color: $nanoverse-accent;
+    background: rgba($nanoverse-purple, 0.2);
+    border-color: $nanoverse-purple-light;
+    transform: translateY(-2px);
   }
 }
 
-.reveal .controls {
-  color: $nanoverse-secondary;
+// Links
+.reveal a {
+  color: $nanoverse-purple-light;
+  
+  &:hover {
+    color: $nanoverse-purple-accent;
+  }
 }
 
+// Controls
+.reveal .controls {
+  color: $nanoverse-purple;
+}
+
+// Progress bar
 .reveal .progress {
-  background: rgba($nanoverse-secondary, 0.2);
+  background: rgba($nanoverse-purple, 0.2);
   
   span {
-    background: linear-gradient(90deg, $nanoverse-secondary, $nanoverse-accent);
+    background: linear-gradient(90deg, $nanoverse-purple, $nanoverse-purple-light);
   }
 }
 
+// Slide number
 .reveal .slide-number {
-  color: $nanoverse-secondary;
+  color: $nanoverse-purple-light;
   background: transparent;
 }
 
 // Code blocks
 .reveal pre {
-  box-shadow: 0 8px 32px rgba($nanoverse-primary, 0.3);
+  box-shadow: 0 8px 32px rgba($nanoverse-purple, 0.3);
   border-radius: 8px;
+  background: rgba($nanoverse-dark-primary, 0.6);
 }
 
 .reveal code {
-  color: $nanoverse-accent;
+  color: $nanoverse-purple-light;
+}
+
+// Lists
+.reveal ul,
+.reveal ol {
+  color: $nanoverse-text-white;
+}
+
+// Strong text
+.reveal strong,
+.reveal b {
+  color: $nanoverse-purple-light;
+  font-weight: 700;
+}
+
+// Subtitle/footer text
+.reveal .subtitle {
+  font-size: 1rem;
+  color: $nanoverse-text-white;
+  margin-top: 2rem;
+  font-weight: 300;
 }
