@@ -1,0 +1,76 @@
+/**
+ * Nanoverse theme
+ * Brand colors and styles for nanoverse presentations
+ */
+
+// Variables
+$nanoverse-primary: #7c3aed;
+$nanoverse-secondary: #a78bfa;
+$nanoverse-dark: #1e1b4b;
+$nanoverse-light: #f5f3ff;
+$nanoverse-accent: #ec4899;
+
+// Base reveal.js import
+@import 'reveal.js/dist/theme/black.css';
+
+// Theme customization
+.reveal {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, $nanoverse-dark 0%, darken($nanoverse-primary, 20%) 100%);
+  color: $nanoverse-light;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-weight: 700;
+  color: $nanoverse-secondary;
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  background: linear-gradient(90deg, $nanoverse-secondary, $nanoverse-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.reveal a {
+  color: $nanoverse-secondary;
+  
+  &:hover {
+    color: $nanoverse-accent;
+  }
+}
+
+.reveal .controls {
+  color: $nanoverse-secondary;
+}
+
+.reveal .progress {
+  background: rgba($nanoverse-secondary, 0.2);
+  
+  span {
+    background: linear-gradient(90deg, $nanoverse-secondary, $nanoverse-accent);
+  }
+}
+
+.reveal .slide-number {
+  color: $nanoverse-secondary;
+  background: transparent;
+}
+
+// Code blocks
+.reveal pre {
+  box-shadow: 0 8px 32px rgba($nanoverse-primary, 0.3);
+  border-radius: 8px;
+}
+
+.reveal code {
+  color: $nanoverse-accent;
+}

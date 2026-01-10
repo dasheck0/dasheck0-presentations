@@ -1,0 +1,70 @@
+/**
+ * Nanogiants theme
+ * Brand colors and styles for nanogiants presentations
+ */
+
+// Variables
+$nanogiants-primary: #00d4ff;
+$nanogiants-dark: #0a0e27;
+$nanogiants-light: #ffffff;
+$nanogiants-accent: #ff006e;
+
+// Base reveal.js import
+@import 'reveal.js/dist/theme/black.css';
+
+// Theme customization
+.reveal {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: $nanogiants-dark;
+  color: $nanogiants-light;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-weight: 700;
+  color: $nanogiants-primary;
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.reveal a {
+  color: $nanogiants-primary;
+  
+  &:hover {
+    color: lighten($nanogiants-primary, 10%);
+  }
+}
+
+.reveal .controls {
+  color: $nanogiants-primary;
+}
+
+.reveal .progress {
+  background: rgba($nanogiants-primary, 0.2);
+  
+  span {
+    background: $nanogiants-primary;
+  }
+}
+
+.reveal .slide-number {
+  color: $nanogiants-primary;
+  background: transparent;
+}
+
+// Code blocks
+.reveal pre {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.reveal code {
+  color: $nanogiants-accent;
+}
