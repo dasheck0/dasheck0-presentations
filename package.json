@@ -1,9 +1,16 @@
 {
   "name": "dasheck0-presentations",
   "version": "1.0.0",
-  "description": "",
+  "type": "module",
+  "description": "Presentation hub powered by reveal.js and TypeScript",
   "main": "index.js",
   "scripts": {
+    "cli": "tsx src/cli/index.ts",
+    "create": "npm run cli create",
+    "serve": "npm run cli serve",
+    "build": "npm run cli build",
+    "build:all": "npm run cli build -- --all",
+    "list": "npm run cli list",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Stefan Neidig <s.neidig@nanogiants.de> (https://nanogiants.de/)",
@@ -11,6 +18,22 @@
   "devDependencies": {
     "@commitlint/cli": "^20.3.1",
     "@commitlint/config-conventional": "^20.3.1",
-    "lefthook": "^2.0.13"
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^25.0.5",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "fast-glob": "^3.3.3",
+    "glob": "^13.0.0",
+    "gray-matter": "^4.0.3",
+    "inquirer": "^9.3.8",
+    "lefthook": "^2.0.13",
+    "sass": "^1.97.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-html": "^3.2.2"
+  },
+  "dependencies": {
+    "reveal.js": "^5.2.1"
   }
 }
