@@ -10,15 +10,10 @@ import Reveal from 'reveal.js';
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
 import Notes from 'reveal.js/plugin/notes/notes.esm.js';
-
-const config = {
-  "hash": true,
-  "center": true,
-  "transition": "slide"
-};
+import { nanoverseTheme } from '@themes/nanoverse/config';
 
 const deck = new Reveal({
-  ...config,
+  ...nanoverseTheme.reveal,
   plugins: [Markdown, Highlight, Notes],
 });
 

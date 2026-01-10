@@ -21,6 +21,12 @@ npm run serve -- <name> --port 3000       # With custom port
 npm run build -- 2026-01-10-my-talk       # Build single presentation
 npm run build:all                          # Build all presentations
 
+# Export to PDF
+npm run export                             # Interactive: Choose presentation from list
+npm run export -- 2026-01-10-my-talk      # Export specific presentation
+npm run export -- <name> --output custom.pdf  # Custom output path
+npm run export -- <name> --size 1280x720  # Custom slide size
+
 # Create new presentation
 npm run create                             # Interactive mode with prompts
 npm run cli -- create --name "Title" --theme nanoverse --author "Name"
@@ -482,6 +488,127 @@ Optimize for **clarity, flow, and teaching** — not completeness.
 
 Most decks fail this.  
 Don’t be most decks.
+
+---
+
+## Failure Handling & Next Steps Logging (Mandatory)
+
+### Purpose
+The AI must **never silently fail** or gloss over missing work.
+If the AI is unable to complete a task during presentation creation, it must **explicitly log the failure** so it can be resolved later.
+
+Failures are acceptable.
+Unreported failures are not.
+
+---
+
+### What Counts as a Failure
+The AI must treat the following situations as failures (non-exhaustive):
+
+- Unable to find, generate, or select a suitable asset (image, diagram, video)
+- Unable to create a slide that meets the structure or quality guidelines
+- Missing, ambiguous, or contradictory input required to proceed
+- Uncertainty that would materially affect correctness or clarity
+- Any situation where the AI would otherwise guess or improvise
+
+When in doubt: **log it**.
+
+---
+
+### Failure Response Rules
+
+When a failure occurs, the AI must:
+
+1. **Continue the presentation generation** where possible  
+   - Do not abort the entire process unless explicitly instructed
+2. **Insert a clearly marked placeholder** in the presentation  
+   - Examples: `TODO`, `MISSING ASSET`, `NEEDS REVIEW`
+3. **Append a failure entry to `nextsteps.md`**
+
+Silent degradation is strictly forbidden.
+
+---
+
+### `nextsteps.md` File Rules
+
+- The file name must be exactly: `nextsteps.md`
+- The file must be **upserted only**
+- Never recreate, overwrite, or delete existing content
+- New entries must always be appended at the end
+
+---
+
+### Required Entry Format
+
+Each failure entry must follow this structure exactly:
+
+```md
+### [Failure Type] – <Short Title>
+
+**Location:**
+- Slide number or slide title
+- Section (if applicable)
+
+**Issue:**
+Clear description of what could not be completed.
+
+**Why It Failed:**
+Brief explanation (missing data, ambiguity, unavailable asset, etc.).
+
+**Suggested Next Step:**
+Concrete action a human or follow-up AI run should take.
+
+---
+```
+
+---
+
+### Examples
+
+#### Missing Asset
+```md
+### Missing Asset – Diagram for Event Flow
+
+**Location:**
+- Slide 7: "System Event Flow"
+
+**Issue:**
+No suitable diagram could be generated to explain the event flow.
+
+**Why It Failed:**
+Required system details were not provided.
+
+**Suggested Next Step:**
+Provide a high-level event sequence or approve a conceptual diagram.
+```
+
+#### Incomplete Slide
+```md
+### Incomplete Slide – Metrics Comparison
+
+**Location:**
+- Slide 12: "Performance Comparison"
+
+**Issue:**
+Unable to create a meaningful comparison slide.
+
+**Why It Failed:**
+No concrete metrics or baseline values were available.
+
+**Suggested Next Step:**
+Provide real metrics or confirm that illustrative values are acceptable.
+```
+
+---
+
+### Absolute Rules
+
+- Never hide uncertainty
+- Never invent content to fill gaps
+- Never silently lower quality
+- Never overwrite `nextsteps.md`
+
+If something cannot be done correctly, **make it visible and actionable**.
 
 ---
 

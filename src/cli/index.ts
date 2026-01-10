@@ -5,6 +5,7 @@ import { servePresentation } from './commands/serve';
 import { buildPresentation } from './commands/build';
 import { listPresentations } from './commands/list';
 import { explodePdfCommand } from './commands/explode';
+import { exportPresentation } from './commands/export';
 
 const program = new Command();
 
@@ -42,5 +43,12 @@ program
   .command('explode [file]')
   .description('Explode a PDF file into individual PNG images per page')
   .action((file) => explodePdfCommand({ file }));
+
+program
+  .command('export [presentation]')
+  .description('Export a presentation to PDF using decktape')
+  .option('-o, --output <path>', 'Custom output path')
+  .option('-s, --size <size>', 'Slide size (e.g., 1920x1080)', '1920x1080')
+  .action(exportPresentation);
 
 program.parse();

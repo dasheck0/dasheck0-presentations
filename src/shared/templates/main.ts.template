@@ -20,4 +20,9 @@ const deck = new Reveal({
 
 deck.initialize();
 
+// Expose Reveal globally for PDF export tools (e.g., decktape)
+if (typeof window !== 'undefined') {
+  (window as any).Reveal = deck;
+}
+
 export default deck;

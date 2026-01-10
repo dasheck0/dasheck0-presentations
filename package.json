@@ -12,6 +12,7 @@
     "build:all": "npm run cli build -- --all",
     "list": "npm run cli list",
     "explode": "npm run cli explode",
+    "export": "npm run cli export",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Stefan Neidig <s.neidig@nanogiants.de> (https://nanogiants.de/)",

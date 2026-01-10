@@ -227,6 +227,51 @@ npm run list
 
 Shows all presentations with metadata.
 
+### Export to PDF
+
+**Prerequisites:**
+
+Decktape will be automatically downloaded via npx on first use. No manual installation required!
+
+Optionally install globally to avoid download wait time:
+```bash
+npm install -g decktape
+```
+
+**Interactive mode:**
+```bash
+npm run export
+```
+
+Shows a list of all presentations to choose from.
+
+**Direct mode:**
+```bash
+npm run export -- <presentation-name>
+```
+
+Options:
+- `--output <path>` - Custom output path (default: `exports/<name>-<date>.pdf`)
+- `--size <size>` - Slide dimensions in pixels (default: `1920x1080`)
+
+Examples:
+```bash
+# Export with default settings
+npm run export -- 2026-01-10-my-talk
+
+# Custom output location
+npm run export -- 2026-01-10-my-talk --output ~/Desktop/my-talk.pdf
+
+# Custom slide size (4:3 aspect ratio)
+npm run export -- 2026-01-10-my-talk --size 1024x768
+```
+
+The export command:
+1. Starts a temporary dev server (headless, no browser opens)
+2. Uses [decktape](https://github.com/astefanutti/decktape) (via npx) to render the presentation
+3. Saves the PDF to the `exports/` directory (or custom path)
+4. Cleans up the temporary server automatically
+
 ## Creating Custom Themes
 
 1. Create a new theme directory:
