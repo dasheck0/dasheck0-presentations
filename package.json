@@ -11,6 +11,7 @@
     "build": "npm run cli build",
     "build:all": "npm run cli build -- --all",
     "list": "npm run cli list",
+    "explode": "npm run cli explode",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Stefan Neidig <s.neidig@nanogiants.de> (https://nanogiants.de/)",
@@ -27,6 +28,7 @@
     "gray-matter": "^4.0.3",
     "inquirer": "^9.3.8",
     "lefthook": "^2.0.13",
+    "pdf-lib": "^1.17.1",
     "sass": "^1.97.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",

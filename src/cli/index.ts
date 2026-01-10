@@ -4,6 +4,7 @@ import { createPresentation } from './commands/create';
 import { servePresentation } from './commands/serve';
 import { buildPresentation } from './commands/build';
 import { listPresentations } from './commands/list';
+import { explodePdfCommand } from './commands/explode';
 
 const program = new Command();
 
@@ -36,5 +37,10 @@ program
   .command('list')
   .description('List all presentations')
   .action(listPresentations);
+
+program
+  .command('explode [file]')
+  .description('Explode a PDF file into individual PNG images per page')
+  .action((file) => explodePdfCommand({ file }));
 
 program.parse();
