@@ -270,5 +270,220 @@ src/presentations/<name>/assets/
 
 ---
 
+# AI Presentation Guidelines & Best Practices
+
+## Purpose of This Document
+
+These guidelines define **how an AI should design, structure, and pace a high-quality presentation**.  
+The goal is not to dump information, but to **teach, persuade, or guide an audience through a narrative** using slides as visual support.
+
+Slides are **not documentation**.  
+Slides are **stage props for thinking**.
+
+---
+
+## Core Principles (Non-Negotiable)
+
+### 1. Slides Support the Speaker — They Are Not the Speaker
+- Slides must **never contain full paragraphs**
+- If a slide can be understood fully without explanation, it is probably too verbose
+- Assume the presenter explains the context verbally
+
+**Rule of thumb:**  
+> If it looks like a blog post, it’s wrong.
+
+---
+
+### 2. One Idea Per Slide
+Each slide must communicate exactly **one core idea**:
+- What is this?
+- Why does it matter?
+- How does it work?
+- What comes next?
+
+If you feel the urge to say “also” → create a new slide.
+
+---
+
+### 3. Cognitive Load Is the Enemy
+Humans:
+- Read slower than they listen
+- Forget quickly
+- Hate walls of text
+
+Guidelines:
+- Prefer **short phrases** over sentences
+- Use **3–5 bullets max**
+- Rely on **visual hierarchy**, not density
+
+---
+
+## Presentation Structure (Didactic Flow)
+
+### 1. Opening: Set the Mental Frame (10–15%)
+Goal: Align the audience.
+
+Include:
+- Context (why are we here?)
+- Problem or opportunity
+- Value for the audience
+
+Typical flow:
+1. Title slide (specific topic)
+2. Agenda / journey (3–5 steps)
+3. Problem or motivation
+
+---
+
+### 2. Core Content: Build Understanding (70–80%)
+Goal: Transfer insight, not raw facts.
+
+Preferred patterns:
+- Concept → Explanation → Example
+- Problem → Approach → Outcome
+
+Rules:
+- Introduce concepts incrementally
+- Use recap slides after major sections
+- Avoid jumping abstraction levels
+
+---
+
+### 3. Closing: Lock It In (10–15%)
+Goal: Make it stick.
+
+Include:
+- 3–5 key takeaways
+- Clear conclusion or decision
+- Optional next steps or call to action
+
+The final slide should answer:
+> What should the audience remember tomorrow?
+
+---
+
+## Slide Anatomy
+
+### Title
+- Mandatory on almost every slide
+- Must state the **message**, not the topic
+
+Bad:
+> Architecture
+
+Good:
+> A layered architecture isolates change
+
+---
+
+### Content
+Use one dominant content type per slide:
+- Bullet list
+- Diagram / image
+- Code snippet
+- Quote
+- Small comparison table
+
+Rules:
+- Max **30–40 words** per slide
+- Bullets are phrases, not sentences
+- Code highlights ideas, not full implementations
+
+---
+
+### Visuals
+- Visuals must **explain**, not decorate
+- Every image must have a purpose
+- Images may require explanation, but must clarify something real
+
+Avoid:
+- Meaningless stock photos
+- Decorative icons without informational value
+
+---
+
+## Length & Pacing
+
+### Slide Count
+Approximate pacing:
+- **1 slide ≈ 1–2 minutes**
+
+Typical decks:
+- 10–15 slides → short talk
+- 20–30 slides → conference talk
+- 30–40 slides → deep dive (already risky)
+
+If an AI produces 60 slides: it failed.
+
+---
+
+### Information Density Curve
+- Start light and conceptual
+- Peak in the middle
+- End simplified and distilled
+
+A good deck feels like:
+> ramp up → peak → calm landing
+
+---
+
+## Language & Tone
+
+- Prefer clarity over cleverness
+- Use concrete language
+- Avoid unnecessary jargon
+- Keep bullet structure parallel
+
+Bad:
+- Fast
+- Scales well
+- Has good maintainability
+
+Good:
+- Fast execution
+- Horizontal scalability
+- Clear ownership boundaries
+
+---
+
+## What the AI Must Avoid
+
+Hard no:
+- Paragraphs
+- Multiple topics per slide
+- Repeated slide titles
+- Overlong agenda slides
+- Explaining everything upfront
+
+Soft no:
+- Using animations to mask weak structure
+- Cosmetic slide variation without meaning
+- Ending without a conclusion
+
+---
+
+## Quality Checklist
+
+Before finalizing:
+- Every slide has a clear purpose
+- Content limits respected
+- Logical narrative flow
+- Strong opening and closing
+- Slide count matches duration
+- Slides require a speaker to be complete
+
+---
+
+## Final Rule
+
+> Slides are a **thinking tool**, not a storage format.
+
+Optimize for **clarity, flow, and teaching** — not completeness.
+
+Most decks fail this.  
+Don’t be most decks.
+
+---
+
 **Last Updated**: 2026-01-10  
 **Maintained by**: Stefan Neidig <s.neidig@nanogiants.de>
