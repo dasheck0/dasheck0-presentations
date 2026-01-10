@@ -87,19 +87,20 @@ $nanoverse-text-purple: #8b7ad6;
 }
 
 .reveal h1 {
-  font-size: 4.5em;
-  margin-bottom: 0.3em;
+  font-size: 3em;
+  margin-bottom: 0.4em;
   color: $nanoverse-text-white;
   text-align: center;
   letter-spacing: -0.02em;
 }
 
 .reveal h2 {
-  font-size: 2em;
+  font-size: 1.4em;
   color: $nanoverse-text-purple;
   font-weight: 400;
   text-align: center;
   margin-top: 0;
+  line-height: 1.4;
 }
 
 // Secondary headlines (h3-h6) - Sharp Grotesk Medium
@@ -121,17 +122,17 @@ $nanoverse-text-purple: #8b7ad6;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 3rem;
+  gap: 0.8rem;
+  margin-top: 2rem;
 }
 
 .reveal .tag {
   display: inline-block;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   border: 2px solid $nanoverse-purple;
   border-radius: 50px;
   color: $nanoverse-text-white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   text-transform: none;
   background: transparent;
