@@ -1,6 +1,14 @@
+<!-- .slide: data-background-image="./assets/ai-background.jpg" data-background-opacity="0.1" -->
+
 # KI in der Software-Entwicklung
 
 Die neue Realität für Entwickler
+
+<div class="bottom-grid">
+  <div class="bottom-item">AI</div>
+  <div class="bottom-item">Development</div>
+  <div class="bottom-item">Agents</div>
+</div>
 
 ---
 
@@ -14,24 +22,41 @@ Unsicherheit bei vielen Entwicklern und Studierenden
 
 <!-- .element: class="fragment" -->
 
-**Zentrale Frage:** Lohnt sich eine Ausbildung noch?
-
-<!-- .element: class="fragment" -->
-
-Note: Spoiler: Ja, aber die Rolle verändert sich fundamental.
-
 ---
 
 ## Agenda
 
-- Was ist KI überhaupt?
-- Techniken und Werkzeuge
-- Auswirkungen auf Software-Entwicklung
-- Die Zukunft der Entwickler-Rolle
+<div class="agenda-grid">
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Was ist KI?</h3>
+    </div>
+  </div>
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Terminologie</h3>
+    </div>
+  </div>
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Praxis Beispiel</h3>
+    </div>
+  </div>
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Impact auf die Software Entwicklung</h3>
+    </div>
+  </div>
+  <div class="agenda-item">
+    <div class="agenda-content">
+      <h3>Die Rolle des Entwicklers in der Zukunft</h3>
+    </div>
+  </div>
+</div>
 
 ---
 
-<!-- .slide: data-background-color="#8b7ad6" -->
+<!-- .slide: data-background-image="./assets/ai-concept-brain.jpg" data-background-opacity="0.1" -->
 
 # Was ist KI?
 
@@ -55,24 +80,20 @@ Grundlagen verstehen
 
 <!-- .element: class="fragment" -->
 
-![AI conceptual visualization with digital brain](assets/ai-concept-brain.jpg) <!-- .element: style="max-height: 400px;" -->
-
-<small>Quelle: A Health Blog, CC BY-SA 2.0</small>
-
 --
 
 ## Typen von KI
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
 
-<div>
+<div class="fragment" data-fragment-index="1">
 
 ### Narrow AI
-(Schwache KI)
 
 Spezialisiert auf **eine Aufgabe**
 
 Beispiele:
+
 - Bilderkennung
 - Sprachübersetzung
 - Schachspielen
@@ -81,10 +102,9 @@ Beispiele:
 
 </div>
 
-<div>
+<div class="fragment" data-fragment-index="2">
 
 ### General AI
-(Starke KI)
 
 Kann **jede Aufgabe** wie ein Mensch
 
@@ -96,32 +116,37 @@ Gegenstand von Science Fiction
 
 </div>
 
-<!-- .element: class="fragment" -->
+---
 
-![Network connectivity visualization diagram](assets/network-visualization.jpg) <!-- .element: style="max-height: 300px; margin-top: 2rem;" -->
+<!-- .slide: data-background-image="./assets/ai-concept-brain.jpg" data-background-opacity="0.1" -->
 
-<small>Quelle: brewbooks, CC BY-SA 2.0</small>
+# Terminologie
+
+Wichtige Begriffe
 
 --
 
 ## Large Language Models (LLMs)
 
-**Was sind LLMs?**
+**Was ist das?**
 
-Neuronale Netze, trainiert auf riesigen Textmengen
+<!-- .element: class="fragment" -->
+
+Transformer Modelle (Neural Networks), trainiert auf riesigen Textmengen
 
 <!-- .element: class="fragment" -->
 
 **Fähigkeiten:**
 
-- Text verstehen und generieren
-- Kontext über lange Gespräche
-- Coden, Analysieren, Erklären
-- Kreative Aufgaben
+<!-- .element: class="fragment" -->
+
+- Text generieren auf Basis von Anweisungen (Prompts)
+- Code generieren
+- Bilder, Audio und Videos erstellen
 
 <!-- .element: class="fragment" -->
 
-**Beispiele:** GPT-4, Claude, Gemini
+**Beispiele:** GPT-4o, Claude Sonnet 4.5, Gemini 2.5 Flash
 
 <!-- .element: class="fragment" -->
 
@@ -129,21 +154,24 @@ Note: LLMs sind der Kern der aktuellen KI-Revolution in der Softwareentwicklung.
 
 --
 
-## Was sind AI Agents?
+## AI Agents?
 
-**Definition:**
+**Was ist das?**
 
-Autonome Systeme, die **eigenständig** Aufgaben erledigen
+<!-- .element: class="fragment" -->
+
+Autonome Systeme, die **autonom** Aufgaben erledigen
 
 <!-- .element: class="fragment" -->
 
 **Eigenschaften:**
 
-- Ziel verstehen
-- Plan erstellen
-- Werkzeuge nutzen
-- Iterativ arbeiten
-- Fehler korrigieren
+<!-- .element: class="fragment" -->
+
+- Versteht Ziele und handelt danach
+- Führt autonom Aktionen aus
+- Nutzt Werkzeuge
+- Lernt eigenständig
 
 <!-- .element: class="fragment" -->
 
@@ -153,7 +181,7 @@ Autonome Systeme, die **eigenständig** Aufgaben erledigen
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
 
-<div>
+<div class="fragment" data-fragment-index="1">
 
 ### Chatbot
 
@@ -167,7 +195,7 @@ Ein Austausch
 
 </div>
 
-<div>
+<div class="fragment" data-fragment-index="2">
 
 ### Agent
 
@@ -185,17 +213,17 @@ Iteriert bis zum Ziel
 
 </div>
 
-<!-- .element: class="fragment" -->
-
 --
 
 ## Agent-Beispiel: Code-Review
 
-**Aufgabe:** "Reviewe meinen Pull Request"
+**Aufgabe:** "Review meinen Pull Request"
 
 <!-- .element: class="fragment" -->
 
 **Agent arbeitet autonom:**
+
+<!-- .element: class="fragment" -->
 
 1. Liest Code-Änderungen
 2. Führt statische Analyse durch
@@ -208,77 +236,51 @@ Iteriert bis zum Ziel
 
 Note: Dies würde vorher mehrere manuelle Schritte und Tools erfordern.
 
----
-
-<!-- .slide: data-background-color="#8b7ad6" -->
-
-# Techniken & Werkzeuge
-
-Wie arbeitet man mit KI?
-
 --
 
 ## Prompting
 
-**Die Kunst der richtigen Frage**
+**Was ist das?**
 
-Wie man mit KI kommuniziert
+- Instruktion, die an die KI gegeben wird
+
+<!-- .element: class="fragment" -->
+
+**Schlechter Prompt:**
 
 <!-- .element: class="fragment" -->
 
-**Schlechtes Prompt:**
-
-> "Schreib mir eine Funktion"
-
-<!-- .element: class="fragment" -->
+<div class="fragment" style="font-size: 2rem; font-style: italic;">
+Schreib mir eine Funktion
+</div>
 
 **Gutes Prompt:**
 
-> "Schreibe eine TypeScript-Funktion, die ein Array von Zahlen nimmt und die Summe zurückgibt. Nutze funktionale Programmierung. Füge TypeScript-Typen und JSDoc-Kommentar hinzu."
-
 <!-- .element: class="fragment" -->
+
+<div class="fragment" style="font-size: 2rem; font-style: italic;">
+Schreibe eine TypeScript-Funktion, die ein Array von Zahlen nimmt und die Summe zurückgibt. Nutze funktionale Programmierung. Füge TypeScript-Typen und JSDoc-Kommentar hinzu.
+</div>
 
 --
 
 ## Prompt Engineering Prinzipien
 
 **Kontext geben**
+
 - Rolle, Situation, Ziel
 
 **Spezifisch sein**
+
 - Format, Struktur, Constraints
 
 **Beispiele zeigen**
+
 - Few-shot learning
 
 **Iterativ verfeinern**
-- Feedback-Loop
 
-<!-- .element: class="fragment" -->
-
---
-
-## Artefakte
-
-**Was sind Artefakte?**
-
-Strukturierte Ausgaben, die KI erstellt
-
-<!-- .element: class="fragment" -->
-
-**Beispiele:**
-
-- Code-Dateien
-- Dokumentation
-- Diagramme
-- Konfigurationen
-- Tests
-
-<!-- .element: class="fragment" -->
-
-**Vorteil:** Direkt nutzbar, versionierbar, iterierbar
-
-<!-- .element: class="fragment" -->
+- Feedback-Loop, Chain of Thought
 
 --
 
@@ -286,19 +288,23 @@ Strukturierte Ausgaben, die KI erstellt
 
 **Was ist das?**
 
-Maximale "Gedächtnisspanne" eines LLM
+<!-- .element: class="fragment" -->
+
+Maximale "Gedächtnisspanne" eines LLM -> Short Term Memory
 
 <!-- .element: class="fragment" -->
 
-**Früher:** ~4.000 Tokens (~3.000 Wörter)
-
-**Heute:** 200.000+ Tokens (komplette Codebases)
-
-<!-- .element: class="fragment" -->
+<div class="fragment">
+Früher: ca. 4.000 Tokens (ca. 3.000 Wörter) <br />
+Heute: 200.000+ Tokens
+</div>
 
 **Bedeutung:**
 
-KI kann jetzt **gesamte Projekte** verstehen
+<!-- .element: class="fragment" -->
+
+- KI kann jetzt **gesamte Projekte** verstehen
+- Längere Sessions mit mehreren Schritten möglich
 
 <!-- .element: class="fragment" -->
 
@@ -306,122 +312,115 @@ Note: Dies verändert die Arbeitsweise fundamental - KI versteht den vollen Kont
 
 --
 
-## Wichtige Tools für Entwickler
-
-**Code-Assistenten:**
-- GitHub Copilot
-- Cursor
-- Windsurf
-- Cline
-
-**Chat-Interfaces:**
-- ChatGPT
-- Claude
-- Gemini
-
-**Spezialisierte Tools:**
-- v0.dev (UI-Generierung)
-- Bolt.new (Full-Stack Apps)
-
-<!-- .element: class="fragment" -->
-
---
-
-## Copilot vs. Cursor vs. Agents
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-
-<div>
-
-### Copilot
-
-**Autovervollständigung++**
-
-Schlägt Code-Zeilen vor
-
-Du schreibst, es ergänzt
-
-Passiv
-
-</div>
-
-<div>
-
-### Cursor / Agents
-
-**Aktive Zusammenarbeit**
-
-Versteht Kontext
-
-Macht Änderungen
-
-Plant mehrere Schritte
-
-Nutzt Tools
-
-</div>
-
-</div>
-
-<!-- .element: class="fragment" -->
-
---
-
-## Chain of Thought (CoT)
+## Model Context Protocol
 
 **Was ist das?**
 
-KI "denkt laut" und zeigt Zwischenschritte
+<!-- .element: class="fragment" -->
+
+- Protocol um LLMs mit externen Daten zu verbinden
+- Zugriff auf externe Quellen wie APIs, Dateien, Tools
 
 <!-- .element: class="fragment" -->
 
-**Beispiel:**
-
-```
-Problem: Warum ist die App langsam?
-
-Schritt 1: Lade Metriken
-Schritt 2: Analysiere DB-Queries
-Schritt 3: Prüfe Netzwerk-Requests
-Schritt 4: Identifiziere Bottleneck
-Ergebnis: N+1 Query Problem
-```
+- Entwickelt von Anthropic
 
 <!-- .element: class="fragment" -->
 
-**Vorteil:** Nachvollziehbar, debugbar, lernbar
+**Beispiele**
+
+<!-- .element: class="fragment" -->
+
+- Github MCP Server
+- Context7 MCP Server
+- Playwright MCP Server
 
 <!-- .element: class="fragment" -->
 
 --
 
-## RAG (Retrieval Augmented Generation)
+## Der KI Eisberg für Entwickler
 
-**Problem:** LLMs kennen nur Trainingsdaten
-
-<!-- .element: class="fragment" -->
-
-**Lösung:** Zugriff auf externe Datenquellen
-
-<!-- .element: class="fragment" -->
-
-**Wie funktioniert RAG?**
-
-1. Suche relevante Dokumente
-2. Füge sie dem Kontext hinzu
-3. KI antwortet basierend darauf
-
-<!-- .element: class="fragment" -->
-
-**Beispiel:** Firmen-Dokumentation, API-Docs, Codebase
-
-<!-- .element: class="fragment" -->
-
-Note: Ermöglicht KI-Zugriff auf private oder aktuelle Daten.
+<div class="comparison-grid">
+  <div class="comparison-column fragment">
+  <div class="comparison-box">
+    <h3>Chat</h3>
+    <p>z.b. ChatGPT</p>
+  </div>
+  <div class="info">
+  - Einfache Anfragen
+  </div>
+  <div class="info">
+- Prompting wichtig
+  </div>
+  <div class="info">
+- Kontext wichtig
+  </div>
+  </div>
+  <div class="comparison-column  fragment">
+  <div class="comparison-box">
+    <h3>CoPilot Systeme</h3>
+    <p>z.b. Github CoPilot</p>
+  </div>
+  <div class="info">
+- Oft integriert in die IDE
+  </div>
+  <div class="info">
+- Kontext wird von CoPilot organisiert
+  </div>
+  <div class="info">
+- Inline Suggestions
+  </div>
+  <div class="info">
+- Guidelines wichtig
+  </div>
+  </div>
+  <div class="comparison-column  fragment">
+  <div class="comparison-box">
+    <h3>Multi Agenten</h3>
+    <p>z.b. opencode</p>
+  </div>
+  <div class="info">
+- Oft integriert ins Terminal
+  </div>
+  <div class="info">
+- Kontext Recompacting
+  </div>
+  <div class="info">
+- Spezialisierte Subagents
+  </div>
+  <div class="info">
+- Integriertes Permission System
+  </div>
+  </div>
+  <div class="comparison-column  fragment">
+  <div class="comparison-box">
+    <h3>Autonome Agenten</h3>
+    <p>z.b. Claude Code</p>
+  </div>
+  <div class="info">
+- Subagents mit dedizierten Context Windows
+  </div>
+  <div class="info">
+- PRDs oder Spec KIT hilfreich
+  </div>
+  <div class="info">
+- Oft deployed auf separaten Servern
+  </div>
+  </div>
+</div>
 
 ---
 
-<!-- .slide: data-background-color="#8b7ad6" -->
+<!-- .slide: data-background-image="./assets/developer.jpg" data-background-opacity="0.1" -->
+
+# Praxisbeispiel
+
+<img src="./assets/qrcode2.png" alt="QR Code">
+
+---
+
+<!-- .slide: data-background-image="./assets/developer.jpg" data-background-opacity="0.1" -->
 
 # Auswirkungen auf die Entwicklung
 
@@ -443,9 +442,7 @@ Was ändert sich konkret?
 
 ✅ Code-Reviews
 
-✅ Einfache Features implementieren
-
-<!-- .element: class="fragment" -->
+✅ Komplexe Features implementieren
 
 Note: Dies sind keine Zukunftsvisionen - das funktioniert heute.
 
@@ -463,8 +460,6 @@ Note: Dies sind keine Zukunftsvisionen - das funktioniert heute.
 
 ❌ Langfristige strategische Planung
 
-<!-- .element: class="fragment" -->
-
 **Aber:** Die Grenze verschiebt sich **schnell**
 
 <!-- .element: class="fragment" -->
@@ -475,7 +470,7 @@ Note: Dies sind keine Zukunftsvisionen - das funktioniert heute.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
 
-<div>
+<div class="fragment">
 
 ### Früher
 
@@ -487,7 +482,7 @@ Langsam, aber kontrolliert
 
 </div>
 
-<div>
+<div class="fragment">
 
 ### Mit KI
 
@@ -503,17 +498,13 @@ Qualitätssicherung wichtiger
 
 </div>
 
-<!-- .element: class="fragment" -->
-
-![Code on screen showing modern development workflow](assets/code-workflow.jpg) <!-- .element: style="max-height: 350px; margin-top: 2rem;" -->
-
-<small>Quelle: markus spiske, CC0 1.0</small>
-
 --
 
 ## Produktivitätssteigerung
 
 **Studien zeigen:**
+
+<!-- .element: class="fragment" -->
 
 - 40-50% schnellere Entwicklung
 - 60% mehr Aufgaben abgeschlossen
@@ -521,7 +512,13 @@ Qualitätssicherung wichtiger
 
 <!-- .element: class="fragment" -->
 
+<small>Quelle: GitHub Copilot Studie 2023, McKinsey Developer Survey 2024</small>
+
+<!-- .element: class="fragment" -->
+
 **Aber:**
+
+<!-- .element: class="fragment" -->
 
 Code-Qualität muss überwacht werden
 
@@ -534,15 +531,33 @@ Note: Quellen: GitHub Copilot Studie 2023, McKinsey Developer Survey 2024
 ## Neue Risiken
 
 **Sicherheit:**
+
+<!-- .element: class="fragment" -->
+
 - Generierter Code kann Vulnerabilities enthalten
 
+<!-- .element: class="fragment" -->
+
 **Lizenz-Probleme:**
+
+<!-- .element: class="fragment" -->
+
 - Training auf öffentlichem Code (GPL, etc.)
 
+<!-- .element: class="fragment" -->
+
 **Halluzinationen:**
+
+<!-- .element: class="fragment" -->
+
 - KI erfindet manchmal APIs/Funktionen
 
+<!-- .element: class="fragment" -->
+
 **Over-Reliance:**
+
+<!-- .element: class="fragment" -->
+
 - Verlernen von Grundlagen
 
 <!-- .element: class="fragment" -->
@@ -553,25 +568,29 @@ Note: Quellen: GitHub Copilot Studie 2023, McKinsey Developer Survey 2024
 
 **✅ DO:**
 
+<!-- .element: class="fragment" -->
+
 - KI als Co-Pilot, nicht als Autopilot
-- Generierten Code immer reviewen
+- Generierten Code immer reviewen und verstehen
 - Tests schreiben (auch KI-generiert)
 - Kontext gut beschreiben
-- Iterativ arbeiten
 
 <!-- .element: class="fragment" -->
 
 **❌ DON'T:**
 
+<!-- .element: class="fragment" -->
+
 - Blind Copy-Paste
 - Credentials in Prompts
 - Vertrauliche Daten teilen
+- Entwickler Identität aufgeben
 
 <!-- .element: class="fragment" -->
 
 ---
 
-<!-- .slide: data-background-color="#8b7ad6" -->
+<!-- .slide: data-background-image="./assets/developer.jpg" data-background-opacity="0.1" -->
 
 # Die Zukunft der Entwickler
 
@@ -585,7 +604,7 @@ Sollte ich noch eine Ausbildung machen?
 
 <!-- .element: class="fragment" -->
 
-**Kurze Antwort:** Nein
+**Kurze Antwort:** Nein (Opinionated)
 
 <!-- .element: class="fragment" -->
 
@@ -599,11 +618,15 @@ Sollte ich noch eine Ausbildung machen?
 
 **Problemlösung & kritisches Denken**
 
+<!-- .element: class="fragment" -->
+
 KI gibt Lösungen → Du entscheidest, ob sie gut sind
 
 <!-- .element: class="fragment" -->
 
 **Architektur & Design**
+
+<!-- .element: class="fragment" -->
 
 Systemisches Denken bleibt menschlich
 
@@ -611,11 +634,15 @@ Systemisches Denken bleibt menschlich
 
 **Domänenwissen**
 
+<!-- .element: class="fragment" -->
+
 Business-Kontext verstehen
 
 <!-- .element: class="fragment" -->
 
 **Kommunikation**
+
+<!-- .element: class="fragment" -->
 
 Mit Menschen, Stakeholdern, Teams
 
@@ -627,7 +654,7 @@ Mit Menschen, Stakeholdern, Teams
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
 
-<div>
+<div class="fragment">
 
 ### Traditionell
 
@@ -643,7 +670,7 @@ Implementation
 
 </div>
 
-<div>
+<div class="fragment">
 
 ### Mit KI
 
@@ -671,11 +698,15 @@ Quality Assurance
 
 **Realistisches Szenario:**
 
+<!-- .element: class="fragment" -->
+
 Jobs ändern sich, nicht verschwinden
 
 <!-- .element: class="fragment" -->
 
 **Warum:**
+
+<!-- .element: class="fragment" -->
 
 - Mehr Features = mehr Nachfrage
 - Neue Anwendungsfälle möglich
@@ -731,15 +762,19 @@ Note: Wer nur Copy-Paste macht, wird ersetzbar. Wer versteht, orchestriert und b
 
 **Jetzt:**
 
-- Nutze KI-Tools täglich
+<!-- .element: class="fragment" -->
+
+- Nutze KI-Tools regelmäßig
 - Lerne Grundlagen **tief**
-- Verstehe, was KI gut/schlecht kann
+- Verstehe, was KI gut / schlecht kann
 - Experimentiere mit Agents
 - Bleib neugierig
 
 <!-- .element: class="fragment" -->
 
 **Langfristig:**
+
+<!-- .element: class="fragment" -->
 
 - Spezialisiere dich (AI, Security, DevOps)
 - Entwickle Soft Skills
@@ -753,6 +788,8 @@ Note: Wer nur Copy-Paste macht, wird ersetzbar. Wer versteht, orchestriert und b
 
 **Ist gleichzeitig:**
 
+<!-- .element: class="fragment" -->
+
 - Architekt (Design-Entscheidungen)
 - Orchestrator (KI-Tools koordinieren)
 - Qualitätswächter (Review & Testing)
@@ -765,59 +802,10 @@ Note: Wer nur Copy-Paste macht, wird ersetzbar. Wer versteht, orchestriert und b
 
 <!-- .element: class="fragment" -->
 
-![Modern developer working with AI tools](assets/developer-coding.jpg) <!-- .element: style="max-height: 400px; margin-top: 2rem;" -->
-
-<small>Quelle: rawpixel, CC0 1.0</small>
-
 ---
 
-## Key Takeaways
+## Open questions
 
-KI ist ein **mächtiges Werkzeug**, kein Ersatz
-
-<!-- .element: class="fragment" -->
-
-**Grundlagen** werden wichtiger, nicht unwichtiger
-
-<!-- .element: class="fragment" -->
-
-Die Rolle verschiebt sich zu **Architektur & Orchestrierung**
-
-<!-- .element: class="fragment" -->
-
-**Ausbildung lohnt sich** – mit neuen Schwerpunkten
-
-<!-- .element: class="fragment" -->
-
-Wer KI beherrscht, wird **produktiver und wertvoller**
-
-<!-- .element: class="fragment" -->
-
----
-
-## Ressourcen
-
-**Zum Ausprobieren:**
-- GitHub Copilot (kostenlos für Studenten)
-- Claude.ai / ChatGPT (Freemium)
-- Cursor.sh / Windsurf (KI-Editoren)
-
-**Zum Lernen:**
-- promptingguide.ai
-- learnprompting.org
-- deeplearning.ai (Kurse)
-
-**Zum Verfolgen:**
-- r/MachineLearning
-- AI Discord Communities
-- Twitter/X: @karpathy, @sama
-
-<!-- .element: class="fragment" -->
-
----
-
-## Fragen?
-
-Let's discuss!
-
-Note: Denkt daran: Die beste Zeit, um KI zu lernen, war gestern. Die zweitbeste Zeit ist jetzt.
+1. Wie blickt ihr in die Zukunft in Bezug auf eure Rolle / Branche?
+2. Was sind eure Erfahrung mit KI-Tools bisher?
+3. Wo seht ihr Chancen in dem Wandel? Und wie bereitet ihr euch heute schon darauf vor?
