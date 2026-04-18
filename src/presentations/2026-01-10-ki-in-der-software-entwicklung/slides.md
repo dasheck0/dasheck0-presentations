@@ -339,6 +339,33 @@ Note: Dies verändert die Arbeitsweise fundamental - KI versteht den vollen Kont
 
 --
 
+## Skills
+
+Spezialisierte Instruktionssets, die ein KI-Agent kontextabhängig **automatisch erkennt und ausführt**
+
+<!-- .element: class="fragment" -->
+
+Sie kapseln komplexe, mehrstufige Prozesse als wiederverwendbare Workflows — vergleichbar mit Funktionen in Code
+
+<!-- .element: class="fragment" -->
+
+Damit eignen sie sich besonders zur **Orchestrierung standardisierter Abläufe**
+
+<!-- .element: class="fragment" -->
+
+**Beispiele:**
+
+<!-- .element: class="fragment" -->
+
+- `story-to-impl-plan` – Implementierungsplan aus User Story erstellen
+- `epic-to-stories` – Epic in User Stories aufteilen
+- `ui-ux-research` – UI/UX Best Practices recherchieren
+- `skill-creator` – Neue Skills erstellen und optimieren
+
+<!-- .element: class="fragment" -->
+
+--
+
 ## Der KI Eisberg für Entwickler
 
 <div class="comparison-grid">

@@ -348,6 +348,33 @@ Note: This fundamentally changes the way of working - AI understands the full co
 
 --
 
+## Skills
+
+Specialized instruction sets that an AI agent **automatically recognizes and executes** based on context
+
+<!-- .element: class="fragment" -->
+
+They encapsulate complex, multi-step processes as reusable workflows — comparable to functions in code
+
+<!-- .element: class="fragment" -->
+
+This makes them particularly suited for **orchestrating standardized workflows**
+
+<!-- .element: class="fragment" -->
+
+**Examples:**
+
+<!-- .element: class="fragment" -->
+
+- `story-to-impl-plan` – Create implementation plan from user story
+- `epic-to-stories` – Break epic into user stories
+- `ui-ux-research` – Research UI/UX best practices
+- `skill-creator` – Create and optimize new skills
+
+<!-- .element: class="fragment" -->
+
+--
+
 ## The AI Iceberg for Developers
 
 <div class="comparison-grid">
