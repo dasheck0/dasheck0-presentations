@@ -437,6 +437,72 @@ Damit eignen sie sich besonders zur **Orchestrierung standardisierter Abläufe**
   </div>
 </div>
 
+--
+
+## Dialogbasiert vs. Autonom
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.72em;">
+
+<div class="fragment" data-fragment-index="1">
+
+### 💬 Dialogbasiert
+
+Prompt → Ergebnis → Feedback → Prompt
+
+
+**Vorteile:**
+- Schnelles Korrigieren möglich
+- Mehr Kontrolle im Prozess
+- Gut für explorative Aufgaben
+
+**Nachteile:**
+- Zeitintensiv durch ständige Interaktion
+- Ergebnis hängt stark von der Fähigkeit ab, den Dialog sinnführend zu steuern
+
+</div>
+
+<div class="fragment" data-fragment-index="2">
+
+### 🤖 Autonom
+
+Anforderungen → Implementierungsplan → Agent arbeitet bis Fertigstellung
+
+**Vorteile:**
+- Kein manueller Aufwand während Ausführung
+- Skalierbar auf komplexe Aufgaben
+
+**Nachteile:**
+- Hoher Aufwand upfront (Anforderungen, Plan)
+- Fehler werden erst am Ende sichtbar
+- Weniger Kontrolle während der Ausführung
+
+</div>
+
+</div>
+
+--
+
+## Wann nutze ich was?
+
+<p style="font-size:0.82em;margin-bottom:0.2em">Dialogbasiert baut Kompetenz auf — Autonom entfaltet sein Potenzial erst ab einem gewissen Niveau.</p>
+
+<!-- .element: class="fragment" -->
+
+<div class="fragment" style="margin-top:1.2em">
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:400px;display:block">
+  <rect x="50" y="10" width="225" height="360" fill="rgba(139,122,214,0.12)" rx="6"/>
+  <rect x="275" y="10" width="495" height="360" fill="rgba(236,72,153,0.08)" rx="6"/>
+  <line x1="50" y1="370" x2="775" y2="370" stroke="#888" stroke-width="2"/>
+  <polygon points="775,365 787,370 775,375" fill="#888"/>
+  <path d="M 50,360 C 90,270 150,180 220,135 S 420,85 770,70" stroke="#8b7ad6" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <line x1="275" y1="10" x2="275" y2="370" stroke="#ec4899" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="162" y="46" text-anchor="middle" fill="#8b7ad6" font-size="20" font-weight="bold">💬 Dialogbasiert</text>
+  <text x="522" y="46" text-anchor="middle" fill="#ec4899" font-size="20" font-weight="bold">🤖 Autonom</text>
+  <text x="415" y="408" text-anchor="middle" fill="#aaa" font-size="16">Grad der Kompetenz →</text>
+  <text x="295" y="220" fill="#ec4899" font-size="14" transform="rotate(-90,290,220)">Schwellwert</text>
+</svg>
+</div>
+
 ---
 
 <!-- .slide: data-background-image="./assets/developer.jpg" data-background-opacity="0.1" -->
